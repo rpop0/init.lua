@@ -49,7 +49,7 @@ require('lspconfig').pylsp.setup{
     }
 }
 
--- Ruff_lsp used for linting
+-- Ruff_lsp used for python linting
 require('lspconfig').ruff_lsp.setup{}
 
 require('lspconfig').tsserver.setup{}

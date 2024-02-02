@@ -14,7 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        dependencies = { 'nvim-lua/plenary.nvim'}
+        dependencies = { 
+            'nvim-lua/plenary.nvim',
+            'BurntSushi/ripgrep'
+        }
 
     },
     {
