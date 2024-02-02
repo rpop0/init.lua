@@ -29,5 +29,6 @@ vim.api.nvim_create_autocmd("FileType", {
     command = "set colorcolumn=120"
 })
 
+vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank()]]
 
 vim.g.mapleader = " "
