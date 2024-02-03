@@ -10,9 +10,6 @@ return {
             'rafamadriz/friendly-snippets',
         },
         config = function()
-            local lsp_zero = require('lsp-zero')
-            lsp_zero.extend_cmp()
-
             local cmp = require('cmp')
             local cmp_autopairs = require('nvim-autopairs.completion.cmp')
             local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -25,7 +22,6 @@ return {
                     {name = 'luasnip', keyword_length = 2},
                     {name = 'buffer', keyword_length = 3},
                 },
-                formatting = lsp_zero.cmp_format(),
                 mapping = cmp.mapping.preset.insert({
                     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
