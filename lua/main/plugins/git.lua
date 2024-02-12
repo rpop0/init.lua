@@ -8,7 +8,12 @@ return {
                 vim.keymap.set('n', '<leader>hr', gs.reset_hunk)
                 vim.keymap.set('n', '<leader>tb', gs.toggle_current_line_blame)
                 vim.keymap.set('n', '<leader>hb', function() gs.blame_line{full=true} end)
+
+                -- Text objects
+                vim.keymap.set('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+                vim.keymap.set('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
             end
         }
     end
 }
+
