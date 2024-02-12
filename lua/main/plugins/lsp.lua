@@ -60,7 +60,7 @@ lsp_config.config = function ()
     end)
 
     require('mason-lspconfig').setup({
-        ensure_installed = {'pylsp', 'ruff_lsp', 'tsserver', 'cssls', 'html', 'svelte', 'tailwindcss'},
+        ensure_installed = {'pylsp', 'ruff_lsp', 'tsserver', 'cssls', 'html', 'svelte'},
         handlers = {
             lsp_zero.default_setup,
             pylsp = setup_pylsp,
