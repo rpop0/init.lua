@@ -7,7 +7,9 @@ return{
         require("catppuccin").setup({
             integrations = {
                 cmp = true,
-                treesitter = true
+                treesitter = true,
+                leap = true,
+                harpoon = true
             }
         })
         vim.cmd.colorscheme "catppuccin"
