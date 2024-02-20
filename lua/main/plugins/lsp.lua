@@ -31,6 +31,8 @@ local setup_pylsp = function ()
                     autopep8 = {enabled = false},
                     mccabe = {enabled = false},
                     yapf = {enabled = false},
+                    flake8 = {enabled = false},
+                    pydocstyle = {enabled = false},
                     jedi_completion = { fuzzy = true }
 
                 }
@@ -60,6 +62,7 @@ lsp_config.config = function ()
     end)
 
     require('mason-lspconfig').setup({
+        -- Use :PylspInstall for mypy
         ensure_installed = {'pylsp', 'ruff_lsp', 'tsserver', 'cssls', 'html', 'svelte'},
         handlers = {
             lsp_zero.default_setup,
